@@ -7,9 +7,9 @@ import argparse
 # ====== Argument Parser ======
 parser = argparse.ArgumentParser(description="Evaluate and Generate Text using a pre-trained smaLLM model.")
 parser.add_argument("--model_path", type=str, default="smaLLM_lr_decay_01.pth", help="Path to the pre-trained model.")
-parser.add_argument("--data_path", type=str, default="datasets/data.txt", help="Path to the dataset.")
-parser.add_argument("--seed_string", type=str, default="O God, O God!", help="Seed string to start generating text.")
-parser.add_argument("--max_length", type=int, default=200, help="Maximum length of the generated text.")
+parser.add_argument("--data_path", type=str, default="datasets/data_elon.txt", help="Path to the dataset.")
+parser.add_argument("--seed_string", type=str, default="I think ", help="Seed string to start generating text.")
+parser.add_argument("--max_length", type=int, default=280, help="Maximum length of the generated text.")
 parser.add_argument("--batch_size", type=int, default=32, help="Batch size for evaluation.")
 parser.add_argument("--temperature", type=float, default=1.0, help="Temperature value for sampling. Higher values increase diversity.")
 
