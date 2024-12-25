@@ -18,20 +18,25 @@ src/
 │   ├── smaLLM_no_lr_decay_01.pth
 │
 ├── training/
-│   ├── training.py                   # Training function and script
+│   ├── training.py                  # Training function and script
 │
 ├── evaluation/
-│   ├── evaluation.py              # Evaluation and inference function
+│   ├── evaluation.py              # Evaluation function
+|
+├── generation/
+│   ├── generation.py              # Text Generation function
 │
 ├── datasets/
 │   ├── char_dataset.py            # CharDataset definition
 │   ├── data.txt                   # Working Dataset
 │
+├── run_evaluation.py               # Script for evaluation 
+├── run_generation.py               # Script for generation 
 ├── run_training.py                # Main script to start training
-├── run_inference.py               # Script for evaluation and text generation
 │
 └── utils/
     ├── graph.py                   # Utility script to generate graphs (e.g., loss per epoch)
+    ├── clean_data.py              # Utility script to clean data (duh.)
 ```
 
 ---
