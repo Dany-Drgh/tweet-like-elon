@@ -8,7 +8,7 @@ from training.training import train_model
 if __name__ == "__main__":
     # ====== Dataset ======
     # Define your input data (replace with actual dataset for larger-scale training)
-    data_path = "datasets/data.txt"
+    data_path = "datasets/data_elon.txt"
     with open(data_path, "r") as f:
         data = f.read()
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     train_model(
         model=model,
         dataset=dataset,
-        epochs=5,           # Number of epochs
+        epochs=3,           # Number of epochs
         batch_size=32,      # Batch size
         lr=0.001,           # Initial learning rate
         device=device,
@@ -49,8 +49,9 @@ if __name__ == "__main__":
     
     # ====== Save the Model ======
     # Save the trained model to a file
-    torch.save(model.state_dict(), "smaLLM_lr_decay_01.pth")
-    print("\33[1mModel training complete. Model saved to 'smaLLM_lr_decay_01.pth'.\33[0m")
+    model_name = "smaLLM_elon_3-epochs.pth"
+    torch.save(model.state_dict(), model_name)
+    print(f"\33[1mModel training complete. Model saved to {model_name}.\33[0m")
 
     print('_____\n\x1B[3m Dany A. Darghouth - December 2024')
     
